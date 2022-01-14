@@ -20,10 +20,10 @@ class CalculatorServiceParameterizedTest {
 
     public static Stream<Arguments> provideParamsForPlus() {
         return Stream.of(
-                Arguments.of(2, 3, 5),
-                Arguments.of(4, 5, 9),
-                Arguments.of(7, 8, 15),
-                Arguments.of(10, 11, 21)
+                Arguments.of(0, 3, 3),
+                Arguments.of(-4, 5, 1),
+                Arguments.of(-7, -8, -15),
+                Arguments.of(-10, 10, 0)
         );
     }
 
@@ -36,9 +36,9 @@ class CalculatorServiceParameterizedTest {
     public static Stream<Arguments> provideParamsForMinus() {
         return Stream.of(
                 Arguments.of(5, 3, 2),
-                Arguments.of(10, 5, 5),
-                Arguments.of(8, 6, 2),
-                Arguments.of(111, 11, 100)
+                Arguments.of(-10, 5, -15),
+                Arguments.of(8, -10, 18),
+                Arguments.of(-111, -111, 0)
         );
     }
 
@@ -51,9 +51,9 @@ class CalculatorServiceParameterizedTest {
     public static Stream<Arguments> provideParamsForDivide() {
         return Stream.of(
                 Arguments.of(9, 3, 3),
-                Arguments.of(50, 10, 5),
-                Arguments.of(65, 5, 13),
-                Arguments.of(216, 8, 27)
+                Arguments.of(0, 10, 0),
+                Arguments.of(-65, 5, -13),
+                Arguments.of(-216, -8, 27)
         );
     }
 
@@ -65,9 +65,9 @@ class CalculatorServiceParameterizedTest {
 
     public static Stream<Arguments> provideParamsForMultiply() {
         return Stream.of(
-                Arguments.of(2, 5, 10),
-                Arguments.of(11, 3, 33),
-                Arguments.of(100, 8, 800),
+                Arguments.of(-2, 5, -10),
+                Arguments.of(0, 3, 0),
+                Arguments.of(-100, -8, 800),
                 Arguments.of(111, 11, 1221)
         );
     }
